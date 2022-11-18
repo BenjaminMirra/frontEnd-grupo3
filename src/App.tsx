@@ -8,6 +8,7 @@ import { store } from 'store/store';
 import FollowingPage from 'pages/Following.page';
 import { LanguageComponent, LanguageProvider } from 'features/language';
 import { TrackingProvider } from 'features/tracking/tracking.context';
+import GlobalStyle from 'globalStyle';
 
 const App: FC = () => (
   <Provider store={store}>

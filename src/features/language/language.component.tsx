@@ -1,25 +1,26 @@
 import { FC } from 'react';
 import { useLanguage } from 'features/language/index';
+import { LanguageButtonSpanish, LanguageButtonEnglish, LanguageButtonPortuguese} from './language.styles';
 
 const LanguageComponent: FC = () => {
   const { language, setLanguage, t } = useLanguage();
   return (
     <div className={'language'}>
-      <button
+      <LanguageButtonSpanish
         onClick={() => setLanguage('SPANISH')}
-        className={language === 'SPANISH' ? 'language-button active' : 'language-button'}>
-        {t('language.spanish')}
-      </button>
-      <button
+        language={language}
+        children={t('language.spanish')}
+      />
+      <LanguageButtonEnglish
         onClick={() => setLanguage('ENGLISH')}
-        className={language === 'ENGLISH' ? 'language-button active' : 'language-button'}>
-        {t('language.english')}
-      </button>
-      <button
+        language={language}
+        children={t('language.english')}
+      />
+      <LanguageButtonPortuguese
         onClick={() => setLanguage('PORTUGUESE')}
-        className={language === 'PORTUGUESE' ? 'language-button active' : 'language-button'}>
-        {t('language.portuguese')}
-      </button>
+        language={language}
+        children={t('language.portuguese')}
+      />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { FC, PropsWithChildren } from 'react';
+import { CardWrapped } from './card.styles';
 import CardImage from 'features/card/card-image.component';
 import CardBody from 'features/card/card-body.component';
 
@@ -8,7 +9,7 @@ type CompoundCard = FC<PropsWithChildren<object>> & {
 };
 
 const Card: CompoundCard = ({ children }: PropsWithChildren<object>) => (
-  <div className={'card'}>{children}</div>
+  <CardWrapped children={children}/>
 );
 
 Card.Image = CardImage;
